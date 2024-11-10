@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "topic": "ordinary",
+      "imgSrc": "/images/autoslider1.jpg"
+    },
+    {
+      "id": 2,
+      "topic": "ordinary",
+      "imgSrc": "/images/autoslider2.jpg"
+    },
+    {
+      "id": 3,
+      "topic": "ordinary",
+      "imgSrc": "/images/autoslider3.jpg"
+    },
+    {
+      "id": 4,
+      "topic": "ordinary",
+      "imgSrc": "/images/autoslider4.jpg"
+    },
+    {
+      "id": 5,
+      "topic": "ordinary",
+      "imgSrc": "/images/autoslider5.jfif"
+    },
+    {
+      "id": 6,
+      "topic": "ordinary",
+      "imgSrc": "/images/autoslider7.jpg"
+    },
+    {
+      "id": 7,
+      "topic": "ordinary",
+      "imgSrc": "/images/autoslider8.jpg"
+    },
+    {
+      "id": 8,
+      "topic": "ordinary",
+      "imgSrc": "/images/autoslider9.jpg"
+    },
+    {
+      "id": 9,
+      "topic": "ordinary",
+      "imgSrc": "/images/autoslider10.jpg"
+    },
+    {
+        "id": 9,
+        "topic": "ordinary",
+        "imgSrc": "/images/autoslider11.jpg"
+      }
+  ]
+}
