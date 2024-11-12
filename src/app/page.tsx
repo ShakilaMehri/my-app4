@@ -1,16 +1,16 @@
 import React from "react";
 import Header from "./components/Header";
-import Slider from "./components/slider";
 import AutoSlider from "./components/autoSlider";
-import VideoSection from "./components/videoSection";
+import BigImage from "./components/bigImage";
+import Footer from "./components/footer";
 
 const Page = () => {
   return (
     <div>
       <Header />
-      <Slider/>
+      <BigImage/>
       <AutoSlider/>
-      <VideoSection/>
+      <Footer/>
     </div>
   );
 };
