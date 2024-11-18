@@ -1,0 +1,207 @@
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.6s ease-in-out;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(43, 185, 169, 0.2);
+    border-radius: 50%;
+    top: -50px;
+    left: -50px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 183, 77, 0.2);
+    border-radius: 50%;
+    bottom: -30px;
+    right: -30px;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.leftPanel,
+.rightPanel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.leftPanel {
+    background: linear-gradient(135deg, #2bb9a9, #1c8678);
+    color: white;
+    left: 0;
+}
+
+.rightPanel {
+    background: white;
+    color: black;
+    right: 0;
+}
+
+.container.signUPMode .leftPanel {
+    transform: translateX(-100%);
+}
+
+.container.signUPMode .rightPanel {
+    transform: translateX(-100%);
+}
+
+.rightPanel h1 {
+    font-size: 2.5rem;
+    color: #2bb9a9;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.leftPanel h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.leftPanel p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.signInButton,
+.signUpButton {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.signInButton::after, .signUpButton::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6 ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.signInButton {
+    background: white;
+    color: #2bb9a9;
+}
+
+.signInButton:hover {
+    transform: scale(1.1);
+    background: #1c8678;
+    color: white;
+}
+
+.signUpButton {
+    background: #2bb9a9;
+    color: white;
+}
+
+.signUpButton:hover {
+    transform: scale(1.1);
+    background: #1c8678;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px 0;
+}
+
+.socialButton {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #f0f0f0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: bakcground 0.3s ease, transform 0.3s ease;
+}
+
+.socialButton:hover {
+    background: #d8d8d8;
+    transform: scale(1.2);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+.input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    border-color: #2bb9a9;
+    outline: none;
+}
+
+.toggleLink {
+    color: #2bb9a9;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.toggleLink:hover {
+    color: #1c8678;
+}
